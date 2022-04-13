@@ -139,11 +139,21 @@ function App() {
                 handleClickfilter(index);
               }}
             >
-              <span className="select-dropdown-icon">
+              <span className="select-dropdown-icon location-val location-dots">
                 {item.expand ? <BsForward /> : <IoIosArrowDropdown />}
               </span>
               <CgProfile className="profile-icon" />
-              {item.title}
+              {/* added  */}
+              <div className="location-val">
+                <span className="location-dots">{item.title}</span>
+                <span className="location-view">
+                  <p>Category :{item?.category}</p>
+                  <p>Matric Name :{item?.matric_name}</p>
+                  <p>Matric Start :{item?.matric_start}</p>
+                  <p>Matric Target :{item?.matric_target}</p>
+                </span>
+              </div>
+              {/* // added  */}
             </h3>
             {!item.expand === true && (
               <>
@@ -151,7 +161,15 @@ function App() {
                   <p className="show-child">
                     <GoPrimitiveDot className="circle-icon" />
                     <CgProfile className="profile-icon-child" />
-                    {c.title}
+                    <div className="location-val">
+                      <span className="location-dots">{c.title}</span>
+                      <span className="location-view">
+                        <p>Category :{c?.category}</p>
+                        <p>Matric Name :{c?.matric_name}</p>
+                        <p>Matric Start :{c?.matric_start}</p>
+                        <p>Matric Target :{c?.matric_target}</p>
+                      </span>
+                    </div>
                   </p>
                 ))}
               </>
@@ -171,7 +189,15 @@ function App() {
                 {item.expand ? <BsForward /> : <IoIosArrowDropdown />}
               </span>
               <CgProfile className="profile-icon" />
-              {item.title}
+              <div className="location-val">
+                <span className="location-dots">{item.title}</span>
+                <span className="location-view">
+                  <p>Category :{item?.category}</p>
+                  <p>Matric Name :{item?.matric_name}</p>
+                  <p>Matric Start :{item?.matric_start}</p>
+                  <p>Matric Target :{item?.matric_target}</p>
+                </span>
+              </div>
             </h3>
             {!item.expand === true && (
               <>
@@ -179,7 +205,15 @@ function App() {
                   <p className="show-child">
                     <GoPrimitiveDot className="circle-icon" />
                     <CgProfile className="profile-icon-child" />
-                    {c.title}
+                    <div className="location-val">
+                      <span className="location-dots">{c.title}</span>
+                      <span className="location-view">
+                        <p>Category :{c?.category}</p>
+                        <p>Matric Name :{c?.metric_name}</p>
+                        <p>Matric Start :{c?.matric_start}</p>
+                        <p>Matric Target :{c?.matric_target}</p>
+                      </span>
+                    </div>
                   </p>
                 ))}
               </>

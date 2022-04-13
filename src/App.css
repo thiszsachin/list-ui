@@ -130,6 +130,36 @@ color: rgb(131, 111, 111);
 .profile-icon-child{
   margin: 0px 15px 0px 5px;
 }
+.location-val {
+  position: relative;
+  display: inline-block;
+}
+.location-dots {
+  margin-left: 5px;
+}
+.location-val .location-view {
+  visibility: hidden;
+  width: 250px;
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 8px;
+  padding: 2px 0;
+  border: 1px solid rgb(139, 39, 39);
+  position: absolute;
+  z-index: 999 !important;
+  top: 10px;
+  left: 100%;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.location-val:hover .location-view {
+  visibility: visible;
+  cursor: pointer;
+  z-index: 999 !important;
+}
 
 
 

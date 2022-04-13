@@ -1,0 +1,117 @@
+*{
+background-color: aquamarine;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-header{
+  text-align: center;
+  font-style: italic;
+  border: 2px solid black;
+  margin: 0.5% 30%;
+  border-radius: 16px;
+}
+.filter-main-chip{
+  position: absolute;
+  top: 46px;
+  left: 71px;
+  color: red;
+}
+
+.show-child{
+  margin-left: 80px;
+    /* font-family: fantasy; */
+}
+
+h3:hover{
+color: rgb(131, 111, 111);
+}
+.filter-value{
+  margin-left: 10px;
+  width: 200px;
+  border: 1px solid black;
+  padding:9px 7px 10px 17px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.filter-remove{
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: larger;
+  border-radius: 20px;
+  padding: 2px 5px;
+  /* padding: 5px; */
+}
+.filter-remove:hover{
+  background-color: rgb(41, 186, 137);
+}
+.filter-input-select{
+  padding: 10px;
+  border-radius: 16px;
+  margin-right: 10px;
+}
+.filter-submit-btn{
+  border: 1px solid black;
+  border-radius: 14px ;
+  height: 36px;
+  width: 40px;
+}
+.filter-submit-btn:hover{
+  /* background-color: rgb(41, 186, 137) !important; */
+  color: rgb(185, 35, 35);
+  cursor: pointer;
+  border: 2px solid rgb(185, 35, 35);
+  /* font-size: 18px; */
+  
+}
+.filter-submit-icon{
+  /* background-color: rgb(41, 186, 137) !important; */
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: -3px;
+  
+}
+/* .filter-submit-icon:hover{
+  
+} */
+
+
+

@@ -167,7 +167,7 @@ function App() {
                         <p>Category :{c?.category}</p>
                         <p>Matric Name :{c?.matric_name}</p>
                         <p>Matric Start :{c?.matric_start}</p>
-                        <p>Matric Target :{c?.matric_target}</p>
+                        <p>Matric Target :{c?.metric_target}</p>
                       </span>
                     </div>
                   </p>
@@ -176,7 +176,8 @@ function App() {
             )}
           </>
         ))}
-      {(!filter || userList.length > 0) &&
+      {!filter &&
+        userList.length > 0 &&
         userList?.map((item, index) => (
           <>
             <h3
@@ -211,7 +212,7 @@ function App() {
                         <p>Category :{c?.category}</p>
                         <p>Matric Name :{c?.metric_name}</p>
                         <p>Matric Start :{c?.matric_start}</p>
-                        <p>Matric Target :{c?.matric_target}</p>
+                        <p>Matric Target :{c?.metric_target}</p>
                       </span>
                     </div>
                   </p>

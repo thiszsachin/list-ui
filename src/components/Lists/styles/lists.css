@@ -1,0 +1,90 @@
+.select-dropdown-icon {
+  cursor: pointer;
+  margin-top: 0px;
+}
+.main-header{
+  text-align: center;
+  font-style: italic;
+  border: 2px solid black;
+  margin: 0.5% 30%;
+  border-radius: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.main-select-wrapper{
+  display: flex;
+}
+
+.filter-main-chip{
+  position: absolute;
+  top: 79px;
+  left: 51px;
+  color: red;
+}
+.filter-value{
+  margin-left: 10px;
+  width: 200px;
+  border: 1px solid black;
+  padding:9px 7px 10px 17px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.parent-list{
+  font-weight: 600;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.parent-list:hover{
+  color: brown;
+}
+
+.child-list{
+  margin-left: 100px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.child-list:hover{
+  color: brown;
+}
+.child-dot-icon{
+  margin-left: 10px;
+}
+
+.filter-input-select{
+  padding: 10px;
+  border-radius: 16px;
+  margin-right: 10px;
+}
+.filter-submit-btn{
+  border: 1px solid black;
+  border-radius: 14px ;
+  height: 36px;
+  width: 40px;
+}
+.filter-submit-btn:hover{
+  color: rgb(185, 35, 35);
+  cursor: pointer;
+  border: 2px solid rgb(185, 35, 35);
+}
+
+.filter-remove{
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: larger;
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+.filter-remove:hover{
+  background-color: rgb(41, 186, 137);
+}
+
+.filter-submit-icon{
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: -3px;
+  
+}
+.select-wrapper{
+  margin-left: 80%;
+}

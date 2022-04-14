@@ -39,7 +39,6 @@ function App() {
   const handleClick = (index) => {
     let data = [...userList];
     data[index].expand = !data[index].expand;
-    setUserList(data);
     setUserData(data);
   };
 
@@ -53,11 +52,10 @@ function App() {
       if (item.category === filterText) arr.push(item);
     });
     setUserData(arr);
-    console.log(userList);
   };
 
   const handleRemoveFilter = () => {
-    fetchData();
+    setUserData(userList);
     setIsFilter("");
   };
   const handleOnChange = (e) => {

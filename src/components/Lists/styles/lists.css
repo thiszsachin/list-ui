@@ -1,6 +1,7 @@
 .select-dropdown-icon {
   cursor: pointer;
   margin-top: 0px;
+  margin-right: 3px;
 }
 .main-header{
   text-align: center;
@@ -31,21 +32,64 @@
 }
 .parent-list{
   font-weight: 600;
-  margin-left: 10px;
+  margin-left: 43px;
   cursor: pointer;
+  position: relative;
 }
 .parent-list:hover{
   color: brown;
 }
 
 .child-list{
-  margin-left: 100px;
+  margin-left: 59px;
   margin-bottom: 5px;
-  cursor: pointer;
+  padding: 30px;
 }
-.child-list:hover{
+
+.horizontal-line{
+  position: relative;
+}
+.horizontal-line:hover{
+  cursor: pointer;
   color: brown;
 }
+
+.horizontal-line::before{
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -130px;
+  background-color: black;
+  width: 23px;
+  height: 2px;
+}
+.vertical-line{
+  position: relative;
+  margin-left: 10px;
+}
+.vertical-line::before{
+  content: "";
+    position: absolute;
+    top: 15px;
+    left: -74px;
+    background-color: black;
+    width: 2px;
+    height: 444px;
+}
+.parent-profile-icon{
+  position: relative;
+}
+
+.child-number{
+  margin-right: 10px;
+}
+
+.child-pic-icon{
+  margin-right: 41px;
+
+}
+
+
 .child-dot-icon{
   margin-left: 10px;
 }
@@ -88,3 +132,5 @@
 .select-wrapper{
   margin-left: 80%;
 }
+
+

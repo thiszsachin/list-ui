@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
-import { BsForward } from "react-icons/bs";
-import { GoPrimitiveDot } from "react-icons/go";
 import { GoCheck } from "react-icons/go";
 import { CgProfile } from "react-icons/cg";
 import { BiFilterAlt } from "react-icons/bi";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 import "../styles/lists.css";
 import PopupView from "../../PopupView/view";
 
@@ -38,7 +37,7 @@ const List = (props) => {
     <>
       <PopupView detailsData={detailsData} setDetailsData={setDetailsData} />
       <div>
-        <h4 className="main-header">Uber FeedBack List</h4>
+        <h4 className="main-header">User FeedBack List</h4>
         <div>
           {isFilter && (
             <div className="filter-main-chip">
@@ -80,29 +79,37 @@ const List = (props) => {
                   className="select-dropdown-icon"
                   onClick={() => handleClick(index)}
                 >
-                  {item.expand ? <BsForward /> : <IoIosArrowDropdown />}
+                  {item.expand ? (
+                    <MdOutlineArrowForwardIos />
+                  ) : (
+                    <IoIosArrowDropdown />
+                  )}
                 </p>
-                <CgProfile />
+                <CgProfile className="parent-profile-icon" />
                 <div
                   className="parent-list"
                   onClick={() => setDetailsData(item)}
                   key={item.id}
                 >
-                  {item.title}
+                  <span>{index + 1}.</span>
+                  <span className="vertical-line">{item.title}</span>
                 </div>
               </div>
               {!item.expand === true && (
                 <>
                   {item.child.map((c, index) => (
-                    <div
-                      className="child-list"
-                      key={index + 1}
-                      onClick={() => setDetailsData(c)}
-                    >
-                      <CgProfile />
-                      <GoPrimitiveDot className="child-dot-icon" />
-                      {c.title}
-                    </div>
+                    <>
+                      <div className="child-list" key={index + 1}>
+                        <CgProfile className="child-pic-icon" />
+                        <span className="child-number">{index + 1}.</span>
+                        <span
+                          onClick={() => setDetailsData(c)}
+                          className="horizontal-line"
+                        >
+                          {c.title}
+                        </span>
+                      </div>
+                    </>
                   ))}
                 </>
               )}

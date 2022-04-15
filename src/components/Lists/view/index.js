@@ -35,7 +35,6 @@ const List = (props) => {
 
   return (
     <>
-      <PopupView detailsData={detailsData} setDetailsData={setDetailsData} />
       <div>
         <h4 className="main-header">User FeedBack List</h4>
         <div>
@@ -91,7 +90,7 @@ const List = (props) => {
                   onClick={() => setDetailsData(item)}
                   key={item.id}
                 >
-                  <span>{index + 1}.</span>
+                  <span key={item.id}>{index + 1}.</span>
                   <span className="vertical-line">{item.title}</span>
                 </div>
               </div>
@@ -101,7 +100,9 @@ const List = (props) => {
                     <>
                       <div className="child-list" key={index + 1}>
                         <CgProfile className="child-pic-icon" />
-                        <span className="child-number">{index + 1}.</span>
+                        <span key={index + 1} className="child-number">
+                          {index + 1}.
+                        </span>
                         <span
                           onClick={() => setDetailsData(c)}
                           className="horizontal-line"
@@ -116,6 +117,7 @@ const List = (props) => {
             </div>
           ))}
       </div>
+      <PopupView detailsData={detailsData} setDetailsData={setDetailsData} />
     </>
   );
 };

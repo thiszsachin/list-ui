@@ -88,29 +88,24 @@ const List = (props) => {
                 <div
                   className="parent-list"
                   onClick={() => setDetailsData(item)}
-                  key={item.id}
                 >
-                  <span key={item.id}>{index + 1}.</span>
+                  <span>{index + 1}.</span>
                   <span className="vertical-line">{item.title}</span>
                 </div>
               </div>
               {!item.expand === true && (
                 <>
                   {item.child.map((c, index) => (
-                    <>
-                      <div className="child-list" key={index + 1}>
-                        <CgProfile className="child-pic-icon" />
-                        <span key={index + 1} className="child-number">
-                          {index + 1}.
-                        </span>
-                        <span
-                          onClick={() => setDetailsData(c)}
-                          className="horizontal-line"
-                        >
-                          {c.title}
-                        </span>
-                      </div>
-                    </>
+                    <div className="child-list" key={index + 1}>
+                      <CgProfile className="child-pic-icon" />
+                      <span className="child-number">{index + 1}.</span>
+                      <span
+                        onClick={() => setDetailsData(c)}
+                        className="horizontal-line"
+                      >
+                        {c.title}
+                      </span>
+                    </div>
                   ))}
                 </>
               )}

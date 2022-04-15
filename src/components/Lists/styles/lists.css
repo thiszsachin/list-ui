@@ -58,7 +58,7 @@
   content: "";
   position: absolute;
   top: 4px;
-  left: -130px;
+  left: -108px;
   background-color: black;
   width: 23px;
   height: 2px;
@@ -71,7 +71,7 @@
   content: "";
     position: absolute;
     top: 15px;
-    left: -74px;
+    left: -62px;
     background-color: black;
     width: 2px;
     height: 444px;
@@ -92,6 +92,9 @@
 
 .child-dot-icon{
   margin-left: 10px;
+}
+.margin-right-10{
+  margin-right: 10px;
 }
 
 .filter-input-select{

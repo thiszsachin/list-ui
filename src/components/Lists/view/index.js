@@ -89,8 +89,11 @@ const List = (props) => {
                   className="parent-list"
                   onClick={() => setDetailsData(item)}
                 >
-                  <span>{index + 1}.</span>
-                  <span className="vertical-line">{item.title}</span>
+                  <span className="vertical-line">
+                    <span className="margin-right-10">{index + 1}.</span>
+
+                    {item.title}
+                  </span>
                 </div>
               </div>
               {!item.expand === true && (
@@ -98,11 +101,11 @@ const List = (props) => {
                   {item.child.map((c, index) => (
                     <div className="child-list" key={index + 1}>
                       <CgProfile className="child-pic-icon" />
-                      <span className="child-number">{index + 1}.</span>
                       <span
                         onClick={() => setDetailsData(c)}
                         className="horizontal-line"
                       >
+                        <span className="margin-right-10">{index + 1}.</span>
                         {c.title}
                       </span>
                     </div>
